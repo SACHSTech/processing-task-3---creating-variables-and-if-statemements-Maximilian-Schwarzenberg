@@ -1,8 +1,16 @@
 import processing.core.PApplet;
 
 public class Sketch extends PApplet {
-	
-	
+
+  float randx = random(-250, 400);
+  float randy = random(-250, 400);
+
+  
+  /*
+  int randx = 100; // 100 for original
+  int randy = 50; // 50 for original
+  */
+  
   /**
    * Called once at the beginning of execution, put your size all in this method
    */
@@ -16,17 +24,19 @@ public class Sketch extends PApplet {
    * values here i.e background, stroke, fill etc.
    */
   public void setup() {
-    // Renders background later on 
+    // Renders background later on
+
+    // Outputs randx and randy
+    System.out.println("");
+    System.out.println("randx: " + randx);
+    System.out.println("randy: " + randy);
+    System.out.println("");
   }
 
   /**
    * Called repeatedly, anything drawn to the screen goes here
    */
   public void draw() {
-    
-    int randx = 100; // 100 for original
-    int randy = 50; // 50 for original
-
     // Sky colour
     if (randy == 50) { // On ground
       background(135, 206, 235); // Dark blue
